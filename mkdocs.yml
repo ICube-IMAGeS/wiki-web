@@ -14,7 +14,6 @@ strict: true  # Don't allow warnings during the build process
 
 nav:
     - 'index.md'
-    - !ENV SECRET
     # - Section: 'section.md'
     # - Notebooks:
     #     - Test integration: 'notebook.ipynb'
@@ -126,7 +125,6 @@ plugins:
                     members_order: source  
                     heading_level: 4
     - encryptcontent:
-        # global_password: !ENV PASSWORD
         global_password: ''
         title_prefix: ''
         summary: 'This content is not public'

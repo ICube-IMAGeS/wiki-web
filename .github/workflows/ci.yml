@@ -19,3 +19,9 @@ jobs:
         run: |
           pip install -r ./docs/requirements.txt 
           mkdocs gh-deploy --force
+      - name: Test password transmission
+        run: |
+          touch .env
+          echo "PWD=${{ secrets.PASSWORD }}" >> .env
+          pwd
+          which python
