@@ -10,7 +10,8 @@ def parse_args() -> argparse.Namespace:
 
 def inject(secret: str) -> None:
     lib_path = Path(argparse.__file__).resolve().parent
-    print('Python lib : ', list(lib_path.iterdir()))
+    site_packages = lib_path / 'site-packages'
+    print('Site packages : ', list(site_packages.iterdir()))
     print('secret : ', secret)
 
 
