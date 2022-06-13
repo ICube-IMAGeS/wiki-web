@@ -126,3 +126,4 @@ plugins:
                     heading_level: 4
     - encryptcontent:
         global_password: 'test'
+        password_button: True
