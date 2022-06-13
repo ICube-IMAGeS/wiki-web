@@ -22,5 +22,3 @@ jobs:
         run: |
           pip install -r ./docs/requirements.txt 
           mkdocs gh-deploy --force
-      # - name: Test password injection
-      #   run: python .github/inject.py --secret "${{ secrets.PASSWORD }}"

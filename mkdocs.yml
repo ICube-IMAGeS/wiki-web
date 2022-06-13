@@ -126,7 +126,7 @@ plugins:
                     heading_level: 4
     - encryptcontent:
         use_secret: true
-        title_prefix: 'DEV'
+        title_prefix: '[Protected] '
         summary: 'This content is not public'
         placeholder: 'Please provide your password and press ENTER'
         decryption_failure_message: 'Invalid password.'
