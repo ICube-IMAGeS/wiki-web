@@ -10,7 +10,7 @@ def parse_args() -> argparse.Namespace:
 
 
 def inject(secret: str) -> None:
-    python_path = os.popen('which python').stream().strip()
+    python_path = os.popen('which python').read().strip()
     lib_path = Path(python_path).resolve().parent / 'lib'
     print('Python bin path : ', python_path)
     print('Python lib path : ', lib_path)
