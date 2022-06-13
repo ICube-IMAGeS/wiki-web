@@ -19,7 +19,5 @@ jobs:
         run: |
           pip install -r ./docs/requirements.txt 
           mkdocs gh-deploy --force
-      - name: Test password transmission
-        run: | # echo "PWD=${{ secrets.PASSWORD }}" >> .env
-          touch .env
-          python .github/inject.py --secret "${{ secrets.PASSWORD }}"
+      - name: Test password injection
+        run: python .github/inject.py --secret "${{ secrets.PASSWORD }}"

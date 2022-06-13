@@ -10,9 +10,17 @@ def parse_args() -> argparse.Namespace:
 
 def inject(secret: str) -> None:
     path = Path(argparse.__file__).resolve().parent / 'site-packages' / 'encryptcontent'
+    # _______________ Injection _______________ #
     with open(path / 'plugin.py', 'r') as file:
         lines = file.readlines()
-    print(lines[140:200])
+    lines.insert(150, "        # Injecting secret\n")
+    lines.insert(150, "        test = 'test'\n")
+    with open(path / 'plugin.py', 'r') as file:
+        file.writelines(lines)
+    # _________________ Check _________________ #
+    with open(path / 'plugin.py', 'r') as file:
+        lines = file.readlines()
+    print(lines[140:160])
     print('encryptcontent : ', list(path.iterdir()))
     print('secret : ', secret)
 
