@@ -126,7 +126,7 @@ plugins:
                     heading_level: 4
     - encryptcontent:
         # global_password: !ENV PASSWORD
-        global_password: 'test!'
+        global_password: ''
         title_prefix: ''
         summary: 'This content is not public'
         placeholder: 'Please provide your password and press ENTER'
