@@ -116,7 +116,7 @@ plugins:
                     inherited_members: true  # Allow looking up inherited methods
                 rendering:
                     show_root_heading: true  # actually display anything at all...
-                    show_root_full_path: true  # display "diffrax.asdf" not just "asdf"
+                    show_root_full_path: true  # display "module.function" not just "function"
                     show_if_no_docstring: true
                     show_signature_annotations: true
                     show_source: false  # don't include source code
@@ -126,7 +126,7 @@ plugins:
                     heading_level: 4
     - encryptcontent:
         # global_password: !ENV PASSWORD
-        global_password: 'test'
+        global_password: 'test!'
         title_prefix: ''
         summary: 'This content is not public'
         placeholder: 'Please provide your password and press ENTER'
