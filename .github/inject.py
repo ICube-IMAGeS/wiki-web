@@ -1,7 +1,7 @@
 import argparse
 
 
-def parse_args() -> argparse.argparse.Namespace:
+def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser('Injector')
     parser.add_argument('--path', type=str)
     return parser.parse_args()
