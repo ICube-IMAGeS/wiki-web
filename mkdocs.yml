@@ -124,3 +124,5 @@ plugins:
                     # not alphabetical order.
                     members_order: source  
                     heading_level: 4
+    - encryptcontent:
+        global_password: 'test'
