@@ -126,4 +126,8 @@ plugins:
                     heading_level: 4
     - encryptcontent:
         global_password: 'test'
-        password_button: True
+        title_prefix: ''
+        summary: 'This content is not public'
+        placeholder: 'Please provide your password and press ENTER'
+        decryption_failure_message: 'Invalid password.'
+        encryption_info_message: 'You must be a member of the IMAGeS team in order to have access to this page.'
