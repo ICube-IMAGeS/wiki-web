@@ -14,6 +14,7 @@ strict: true  # Don't allow warnings during the build process
 
 nav:
     - 'index.md'
+    - !ENV SECRET
     # - Section: 'section.md'
     # - Notebooks:
     #     - Test integration: 'notebook.ipynb'
