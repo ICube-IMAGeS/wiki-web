@@ -6,4 +6,5 @@ mkdocstrings>=0.17.0                 # Autogenerate documentation from docstring
 mknotebooks>=0.7.1                   # Turn Jupyter Lab notebooks into webpages.
 pytkdocs_tweaks>=0.0.4               # Tweaks mkdocstrings to improve various aspects
 mkdocs_include_exclude_files>=0.0.1  # Tweak which files are included/excluded
-mkdocs-encryptcontent-plugin>=2.1.0  # Password protection
+# mkdocs-encryptcontent-plugin>=2.1.0  # Password protection
+git+https://github.com/ListIndexOutOfRange/mkdocs-encryptcontent-plugin

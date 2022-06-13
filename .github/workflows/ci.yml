@@ -5,6 +5,9 @@ on:
     branches:
       - main
 
+env:
+  PASSWORD: "${{ secrets.PASSWORD }}"
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -19,5 +22,5 @@ jobs:
         run: |
           pip install -r ./docs/requirements.txt 
           mkdocs gh-deploy --force
-      - name: Test password injection
-        run: python .github/inject.py --secret "${{ secrets.PASSWORD }}"
+      # - name: Test password injection
+      #   run: python .github/inject.py --secret "${{ secrets.PASSWORD }}"
