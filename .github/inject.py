@@ -14,6 +14,7 @@ def inject(secret: str) -> None:
     lib_path = Path(python_path).resolve().parent.parent / 'lib'
     print('Python bin path : ', python_path)
     print('Python lib : ', list(lib_path.iterdir()))
+    print('Os module path : ', os.__file__)
     print('secret : ', secret)
 
 
