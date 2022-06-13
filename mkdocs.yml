@@ -1,14 +1,24 @@
 site_name: Template
 site_description: Python Template Docs.
 site_author: Luc Vedrenne
-site_url: https://spfluosmlm.github.io/Template/
-repo_url: https://github.com/SPFluoSMLM/Template
+site_url: https://ListIndexOutOfRange.github.io/TestWiki/
+repo_url: https://github.com/ListIndexOutOfRange/TestWiki
 repo_name: SPFluoSMLM/Template
-# No edit button, as some of our pages are in /docs and some in /examples via symlink, so it's
-# impossible for them all to be accurate.
+# No edit button, as some of our pages could be in docs via symlink, so it's impossible for them
+# all to be accurate.
 edit_uri: ""
 strict: true  # Don't allow warnings during the build process
 
+
+# _______________________________________________________________________________________________ #
+
+nav:
+    - 'index.md'
+    # - Section: 'section.md'
+    # - Notebooks:
+    #     - Test integration: 'notebook.ipynb'
+    # - Full API:
+    #     - Submodule: api/dummy.md
 
 # _______________________________________________________________________________________________ #
 
@@ -114,14 +124,3 @@ plugins:
                     # not alphabetical order.
                     members_order: source  
                     heading_level: 4
-
-
-# _______________________________________________________________________________________________ #
-
-nav:
-    - 'index.md'
-    - Section: 'section.md'
-    - Notebooks:
-        - Test integration: 'notebook.ipynb'
-    - Full API:
-        - Submodule: api/dummy.md

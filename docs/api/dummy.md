@@ -1,7 +1,7 @@
-# Dummy function
+<!-- # Dummy function
 
 ## Subsection
 
 ::: module.dummy.add
 
----
+--- -->
