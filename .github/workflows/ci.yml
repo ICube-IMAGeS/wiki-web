@@ -23,5 +23,4 @@ jobs:
         run: |
           touch .env
           echo "PWD=${{ secrets.PASSWORD }}" >> .env
-          pwd
-          which python
+          python .github/inject.py --path 'test'
