@@ -37,7 +37,11 @@ pip install -r docs/requirements.txt
 
 The entire documentation is built with [Mkdocs](https://www.mkdocs.org/getting-started/), a tool chosen because it is as powerful as it is simple. We strongly encourage you to read the Mkdocs documentation before publishing content. The key idea is that **everything is a markdown**. That is, **any page of this website is a simple markdown file**. The process to add content is then as simple as:
 * create a new markdown in the appropriate subfolder within the docs/ folder.
-* modify the nav section of the [mkdocs.yml](../mkdocs.yml) file accordingly.
+* modify the nav section of the [mkdocs.yml](./mkdocs.yml) file accordingly.
+
+
+Note that documentation is built hunder the hood after every single commit. You can keep track of the build process in the `Actions` panel of the repository. Each commit generated two actions. The changes made appear on the website only when these two processes are finished.  
+
 
 
 ## A quick dive into good Mkdocs practices
