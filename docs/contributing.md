@@ -43,9 +43,9 @@ The entire documentation is built with [Mkdocs](https://www.mkdocs.org/getting-s
 * modify the nav section of the mkdocs.yml file accordingly.<br>
 
 
-!!!tip
+!!! tip
     
-    You can see your changes live locally using the `mkdocs serve` command. When everything is ready to be published, simply commit.
+    You can see your changes live locally using the `mkdocs serve` command. When everything is ready to be published, simply commit. Remember that clear and detailled commit messages help you to stay healthy and in a good mood.
 
 
 This website used Material for Mkdocs. You can quickly check up the available formatting [here](https://squidfunk.github.io/mkdocs-material/reference/). There are tons of pretty formatting options. Take the time to read the reference and try to use them wisely in order to make this documention somehow enjoyable to read.
