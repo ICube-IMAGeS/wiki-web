@@ -13,7 +13,7 @@ strict: true  # Don't allow warnings during the build process
 # _______________________________________________________________________________________________ #
 
 nav:
-    - 'home.md'
+    - Home: 'index.md'
     - 'contributing.md'
     # - Section: 'section.md'
     # - Notebooks:
@@ -92,6 +92,9 @@ markdown_extensions:
         title: On this page
         permalink: "¤"  # Adds a clickable permalink to each section heading
         toc_depth: 4
+    - def_list
+    - pymdownx.tasklist:
+        custom_checkbox: true
 
 
 # _______________________________________________________________________________________________ #

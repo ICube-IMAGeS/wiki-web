@@ -18,4 +18,4 @@
 
 
 Home of the wiki. Nothing to see here :sleeping:        
-Before adding any content, please check the [contribution guide](./contributing.md).
+Before adding any content, please check the [contribution guide](./contributing.md){ .md-button }.
