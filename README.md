@@ -2,7 +2,7 @@
 
 # Wiki of the ICube IMAGeS team
 
-## [Access Documentation](https://ListIndexOutOfRange.github.io/TestWiki/)
+## [Access Documentation](https://listindexoutofrange.github.io/WikiImages/)
 
 
 This repo is a private wiki for the students (but not only) of the ICube IMAGes team.

@@ -1,8 +1,8 @@
 site_name: Wiki of the IMAGeS Team
 site_description: A collection of tips and tricks for students (but not only) of the IMAGeS team.
 site_author: Luc Vedrenne
-site_url: https://ListIndexOutOfRange.github.io/TestWiki/
-repo_url: https://github.com/ListIndexOutOfRange/TestWiki
+site_url: https://listindexoutofrange.github.io/WikiImages/
+repo_url: https://github.com/ListIndexOutOfRange/WikiImages
 repo_name: WikiImagesTeam
 # No edit button, as some of our pages could be in docs via symlink, so it's impossible for them
 # all to be accurate.
