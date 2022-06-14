@@ -1,21 +1,20 @@
 # Home
 
-<!-- For full documentation visit [mkdocs.org](https://www.mkdocs.org).
-
-## Commands
-
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
-
-## Project layout
-
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files. -->
+Home of the wiki. Nothing to see here :sleeping: .<br>
 
 
-Home of the wiki. Nothing to see here :sleeping:        
-Before adding any content, please check the [contribution guide](./contributing.md){ .md-button }.
+!!! tip "To you, new contributor"
+
+    Before adding any content, please check the [contribution guide](./contributing.md).
+
+
+## TODO list
+
+- [x] Initializing repo with auto docs building
+- [x] Creating contribution guide
+    * [x] First writing
+    * [ ] Reread
+    * [ ] Test by a new contributor 
+- [ ] Add real wiki content
+    * [ ] External GPUs access: HPC & miv
+    * [ ] List of useful visualization tools (napari, interactive plot inside a notebook with plotly, ...)

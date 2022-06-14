@@ -26,6 +26,8 @@ nav:
 theme:
     name: material
     features:
+        - content.tabs.link
+        - content.code.annotate
         # - navigation.tabs
         - navigation.sections # Sections are included in the navigation on the left.
         # navigation.expand
@@ -54,6 +56,19 @@ theme:
              icon: material/weather-sunny
              name: Switch to light mode
     icon:
+        admonition:
+            note: octicons/tag-16
+            abstract: octicons/checklist-16
+            info: octicons/info-16
+            tip: octicons/squirrel-16
+            success: octicons/check-16
+            question: octicons/question-16
+            warning: octicons/alert-16
+            failure: octicons/x-circle-16
+            danger: octicons/zap-16
+            bug: octicons/bug-16
+            example: octicons/beaker-16
+            quote: octicons/quote-16
         repo: fontawesome/brands/github  # GitHub logo in top right
         logo: "material/circle-opacity"  # Equinox logo in top left
     favicon: "_static/favicon.png"
@@ -80,22 +95,43 @@ extra_css:
 # _______________________________________________________________________________________________ #
 
 markdown_extensions:
+    - def_list
+    - attr_list
+    - md_in_html
+    - admonition
+    - codehilite
+    # ------------------ #
+    - pymdownx.details
+    - pymdownx.critic
+    - pymdownx.caret
+    - pymdownx.keys
+    - pymdownx.mark
+    - pymdownx.tilde
+    - pymdownx.inlinehilite
+    # ------------------ #
+    - pymdownx.tabbed:
+        alternate_style: true 
     - pymdownx.arithmatex:  # Render LaTeX via MathJax
         generic: true
-    - pymdownx.superfences  # Seems to enable syntax highlighting when used with the Material theme.
-    - pymdownx.details  # Allowing hidden expandable regions denoted by ???
+    - pymdownx.highlight:
+        anchor_linenums: true
+    - pymdownx.superfences:
+        custom_fences:
+            - name: mermaid
+              class: mermaid
+              format: !!python/name:pymdownx.superfences.fence_code_format
     - pymdownx.snippets:  # Include one Markdown file into another
         base_path: docs
-    - admonition
-    - codehilite  
+    - pymdownx.tasklist:
+        custom_checkbox: true
+    - pymdownx.emoji:
+        emoji_index: !!python/name:materialx.emoji.twemoji
+        emoji_generator: !!python/name:materialx.emoji.to_svg
+    # ------------------ #
     - toc:
         title: On this page
         permalink: "¤"  # Adds a clickable permalink to each section heading
         toc_depth: 4
-    - def_list
-    - pymdownx.tasklist:
-        custom_checkbox: true
-
 
 # _______________________________________________________________________________________________ #
 
