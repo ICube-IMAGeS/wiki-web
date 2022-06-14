@@ -17,4 +17,5 @@
         ...       # Other markdown pages, images and other files. -->
 
 
-Template documentation.
+Home of the wiki. Nothing to see here :sleeping:        
+Before adding any content, please check the [contribution guide](./contributing.md).

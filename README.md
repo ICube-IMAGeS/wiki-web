@@ -10,6 +10,8 @@ This repo is a private wiki for the students (but not only) of the ICube IMAGes 
 
 ## Disclaimer
 
-Note that a majority of the code in this repo has been copied from the excessively great [Equinox repo](https://github.com/patrick-kidger/equinox).
+Note that a majority of the code used to setup this repo (mkdocs theme, autodocs, ...) has been copied from the excessively great [Equinox repo](https://github.com/patrick-kidger/equinox).
+
+
 
 

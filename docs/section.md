@@ -1,5 +1,0 @@
-# SECTION
-
-## Subsection
-
-### Subsubsection
