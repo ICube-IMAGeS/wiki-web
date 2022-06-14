@@ -1,4 +1,4 @@
-![](./assets/logo_icube_margin.png)
+![](./assets/logo_icube.png)
 
 # Wiki of the ICube IMAGeS team
 
