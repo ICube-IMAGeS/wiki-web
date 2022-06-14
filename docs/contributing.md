@@ -17,12 +17,15 @@
         ...       # Other markdown pages, images and other files. -->
 
 
-This page present the basic steps required to contribute to this repo. 
+This page present the basic steps required to contribute to this repo. Its content is threefold:
+1. [how to set up the environment to add content](#setting-up-the-environment)
+2. [core principle of this documentation build](#adding-content)
+3. [tips and tricks to publish good content](#a-quick-dive-into-good-mkdocs-practices)
 
 
 ## Setting up the environment
 
-* First, you need to be a contributor of the [Github repository](https://github.com/ListIndexOutOfRange/WikiImages). Please contact any of the [current contributors](https://github.com/ListIndexOutOfRange/WikiImages/graphs/contributors) to ask for access. Note that the website itsef is encrypted. The contributor granting you access should provide you the password as well.
+* First, you need to be a contributor of the [Github repository](https://github.com/ListIndexOutOfRange/WikiImages). Please contact any of the [current contributors](https://github.com/ListIndexOutOfRange/WikiImages/graphs/contributors) to ask for access. Note that the website itself is encrypted. The contributor granting you access should provide you the password as well.
 * Then, clone the repo and install the dependencies:
 ```
 git clone git@github.com:ListIndexOutOfRange/WikiImages.git
@@ -31,3 +34,10 @@ pip install -r docs/requirements.txt
 ```
 
 ## Adding content
+
+The entire documentation is built with [Mkdocs](https://www.mkdocs.org/getting-started/), a tool chosen because it is as powerful as it is simple. We strongly encourage you to read the Mkdocs documentation before publishing content. The key idea is that **everything is a markdown**. That is, **any page of this website is a simple markdown file**. The process to add content is then as simple as:
+* create a new markdown in the appropriate subfolder within the docs/ folder.
+* modify the nav section of the [mkdocs.yml](../mkdocs.yml) file accordingly.
+
+
+## A quick dive into good Mkdocs practices
