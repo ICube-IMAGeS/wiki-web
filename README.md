@@ -1,3 +1,5 @@
+![](./assets/logo_icube_margin.png)
+
 # Wiki of the ICube IMAGeS team
 
 ## [Access Documentation](https://ListIndexOutOfRange.github.io/TestWiki/)
