@@ -185,7 +185,7 @@ And that's it. The API reference will be generated. For instance, a toy function
 
 
 $$
-\star\star\star
+\star\star\star 
 $$
 
 That's all for this contribution guide. Hopefully you now have got a good grasp about how this website works and how to add content :sunglasses: .
