@@ -159,10 +159,11 @@ h5.doc-heading, h6.heading {
 
 @media only screen and (min-width: 76.25em) {
     .md-main__inner {
-      max-width: 150em;
+      max-width: 160em;
     }
     .md-sidebar--primary {
       left: 0;
+      min-width: 25em;
     }
     .md-sidebar--secondary {
       right: 0;

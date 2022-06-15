@@ -100,6 +100,7 @@ markdown_extensions:
     - md_in_html
     - admonition
     - codehilite
+    - footnotes
     # ------------------ #
     - pymdownx.details
     - pymdownx.critic
