@@ -15,6 +15,9 @@ strict: true  # Don't allow warnings during the build process
 nav:
     - Home: 'index.md'
     - 'contributing.md'
+    - External GPUs access:
+        - MIV servers: gpus_access/miv.md
+        - HPC: gpus_access/hpc.md
     # - Section: 'section.md'
     # - Notebooks:
     #     - Test integration: 'notebook.ipynb'
