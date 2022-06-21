@@ -10,5 +10,5 @@ pytkdocs==0.16.1                     # Tweaks mkdocstrings to improve various as
 pytkdocs-tweaks==0.0.5               # Tweaks mkdocstrings to improve various aspects.
 Jinja2==3.1.2                        # New Jinja is fine now.
 # password encryption
-mkdocs-encryptcontent-plugin @ git+https://github.com/ListIndexOutOfRange/mkdocs-encryptcontent-plugin@7403b975967e04263dbdf248d62326ea79e65827
+mkdocs-encryptcontent-plugin @ git+https://github.com/ListIndexOutOfRange/mkdocs-encryptcontent-plugin.git
 
