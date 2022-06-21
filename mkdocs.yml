@@ -93,12 +93,13 @@ extra_css:
 # _______________________________________________________________________________________________ #
 
 markdown_extensions:
-    - def_list
-    - attr_list
-    - md_in_html
     - admonition
+    - attr_list
     - codehilite
+    - def_list
     - footnotes
+    - md_in_html
+    - tables
     # ------------------ #
     - pymdownx.details
     - pymdownx.critic
