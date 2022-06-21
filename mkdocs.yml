@@ -173,7 +173,7 @@ plugins:
                     show_source: false
     # _____________________________________________________________ #
     - encryptcontent:   # password encryption
-        # use_secret: 'PASSWORD'
+        use_secret: 'PASSWORD'
         remember_password: True
         title_prefix: '' # '[Protected] '
         summary: 'This content is not public'
