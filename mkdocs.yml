@@ -144,25 +144,33 @@ plugins:
     #     exclude:
     #         - "_overrides"
     - mknotebooks  # Jupyter notebooks
-    - mkdocstrings: # auto ref from dosctrings
+    # ______________________ mkdocstring OLD ______________________ # 
+    # - mkdocstrings: # auto ref from dosctrings
+    #     handlers:
+    #         python:
+    #             setup_commands:
+    #                 - import pytkdocs_tweaks
+    #                 - pytkdocs_tweaks.main()
+
+    #             selection:
+    #                 inherited_members: true  # Allow looking up inherited methods
+    #             rendering:
+    #                 show_root_heading: true  # actually display anything at all...
+    #                 show_root_full_path: true  # display "module.function" not just "function"
+    #                 show_if_no_docstring: true
+    #                 show_signature_annotations: true
+    #                 show_source: false  # don't include source code
+    #                 # Order methods according to their order of definition in the source code,
+    #                 # not alphabetical order.
+    #                 members_order: source  
+    #                 heading_level: 4
+    - mkdocstrings:
+        default_handler: python
         handlers:
             python:
-                setup_commands:
-                    - import pytkdocs_tweaks
-                    - pytkdocs_tweaks.main()
-
-                selection:
-                    inherited_members: true  # Allow looking up inherited methods
-                rendering:
-                    show_root_heading: true  # actually display anything at all...
-                    show_root_full_path: true  # display "module.function" not just "function"
-                    show_if_no_docstring: true
-                    show_signature_annotations: true
-                    show_source: false  # don't include source code
-                    # Order methods according to their order of definition in the source code,
-                    # not alphabetical order.
-                    members_order: source  
-                    heading_level: 4
+                options:
+                    show_source: false
+    # _____________________________________________________________ #
     - encryptcontent:   # password encryption
         # use Github repository secret
         # ongoing PR: https://github.com/CoinK0in/mkdocs-encryptcontent-plugin/pull/26

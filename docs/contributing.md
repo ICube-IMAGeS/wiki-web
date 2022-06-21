@@ -176,7 +176,10 @@ And that's it. The API reference will be generated. For instance, a toy function
 
 
 ::: code.dummy.add
-
+    options:
+        show_source: false
+        show_root_heading: true
+      
 
 !!! note
 
