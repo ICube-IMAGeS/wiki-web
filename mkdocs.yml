@@ -175,7 +175,7 @@ plugins:
     - encryptcontent:   # password encryption
         # use Github repository secret
         # ongoing PR: https://github.com/CoinK0in/mkdocs-encryptcontent-plugin/pull/26
-        use_secret: true
+        use_secret: 'PASSWORD'
         title_prefix: '' # '[Protected] '
         summary: 'This content is not public'
         placeholder: 'Please provide your password and press ENTER'
