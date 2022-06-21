@@ -173,11 +173,10 @@ plugins:
                     show_source: false
     # _____________________________________________________________ #
     - encryptcontent:   # password encryption
-        # use Github repository secret
-        # ongoing PR: https://github.com/CoinK0in/mkdocs-encryptcontent-plugin/pull/26
-        use_secret: 'PASSWORD'
+        # use_secret: 'PASSWORD'
+        remember_password: True
         title_prefix: '' # '[Protected] '
         summary: 'This content is not public'
-        placeholder: 'Please provide your password and press ENTER'
+        placeholder: 'Please provide your password and press `ENTER`, or `CTRL + ENTER` if you want the password to be remembered on all pages for 24h.'
         decryption_failure_message: 'Invalid password.'
         encryption_info_message: 'You must be a member of the IMAGeS team in order to have access to this page.'

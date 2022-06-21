@@ -55,6 +55,11 @@ Note that the documentation is built hunder the hood after every single commit[^
 
 [^1]: Check the [.github/workflows/ci.yml](https://github.com/ListIndexOutOfRange/WikiImages/blob/main/.github/workflows/ci.yml) file if you wanna know how it's done.
 
+!!! tip
+
+    The content of the website is password encrypted. When you're developping locally, you can disable this by commenting the `use_secret: 'PASSWORD'` line in the mkdocs.yml file and uncomment it before pushing. If you forget to uncomment it, the build will fail.
+
+
 !!! warning 
 
     The Mkdocs documentation advices to build the docs using the `mkdocs gh-deploy` command. **Please don't**.
@@ -179,7 +184,10 @@ And that's it. The API reference will be generated. For instance, a toy function
     options:
         show_source: true
         show_root_heading: true
-      
+
+
+See the common options available [here](https://mkdocstrings.github.io/python/usage/).
+
 
 !!! note
 
