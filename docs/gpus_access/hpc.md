@@ -92,52 +92,52 @@ Let's say we want to execute a file called `main.py` inside a conda environment.
 
 Check out the annotated example script:
 
-??? example "Slurm job script"
+<!-- ??? example "Slurm job script" -->
 
-    ```bash
-    #! /bin/bash
+```bash
+#! /bin/bash
 
-    # +------------------------------------------------------------------------------------+ #
-    # |                                  SLURM PARAMETERS                                  | #
-    # +------------------------------------------------------------------------------------+ #
-    # (1)
+# +------------------------------------------------------------------------------------+ #
+# |                                  SLURM PARAMETERS                                  | #
+# +------------------------------------------------------------------------------------+ #
+# (1)
 
-    #SBATCH -p publicgpu -A miv                         # Partition publicgpu et compte miv
-    #SBATCH -N 1                                        # 1 node
-    #SBATCH -n 1                                        # 1 task
-    #SBATCH -c 1                                        # 1 CPU
-    #SBATCH -o path/to/output.out                       # (2)
-    #SBATCH --gres=gpu:1                                # 1 GPU
-    #SBATCH --mem=16G                                   # 16 Go RAM
-    #SBATCH --constraint="gpua100|gpurtx6000|gpurtx5000|gpuv100" # (3)
-
-
-    # +------------------------------------------------------------------------------------+ #
-    # |                                ENVIRONNEMENT SET UP                                | #
-    # +------------------------------------------------------------------------------------+ #
-
-    module load python/Anaconda
-    module load cuda/11.3
-    source /usr/local/Anaconda/Anaconda3-2019.07/etc/profile.d/conda.sh # (4)
-    conda deactivate
-    conda activate myenv
-    cd path/to/working/directory # (5)
+#SBATCH -p publicgpu -A miv                         # Partition publicgpu et compte miv
+#SBATCH -N 1                                        # 1 node
+#SBATCH -n 1                                        # 1 task
+#SBATCH -c 1                                        # 1 CPU
+#SBATCH -o path/to/output.out                       # (2)
+#SBATCH --gres=gpu:1                                # 1 GPU
+#SBATCH --mem=16G                                   # 16 Go RAM
+#SBATCH --constraint="gpua100|gpurtx6000|gpurtx5000|gpuv100" # (3)
 
 
-    # +------------------------------------------------------------------------------------+ #
-    # |                                 RUN PYTHON SCRIPT                                  | #
-    # +------------------------------------------------------------------------------------+ #
+# +------------------------------------------------------------------------------------+ #
+# |                                ENVIRONNEMENT SET UP                                | #
+# +------------------------------------------------------------------------------------+ #
 
-    python main.py # (6)
+module load python/Anaconda
+module load cuda/11.3
+source /usr/local/Anaconda/Anaconda3-2019.07/etc/profile.d/conda.sh # (4)
+conda deactivate
+conda activate myenv
+cd path/to/working/directory # (5)
 
-    ```
 
-    1. All the SLURM parameters should be adapted to your need of course.
-    2. Any output usually displaying inside your terminal (e.g. `#!python print()` calls) will render inside the output file.  
-    3. Many constraints are available for all kind of hardware request.
-    4. The lines bellow prevent weird behavior when activating an environment inside an environment
-    5. This is of course the folder containing the `main.py` file.
-    6. Here we kept things simple with a single python call but this part could contain multiple instructions.
+# +------------------------------------------------------------------------------------+ #
+# |                                 RUN PYTHON SCRIPT                                  | #
+# +------------------------------------------------------------------------------------+ #
+
+python main.py # (6)
+
+```
+
+1. All the SLURM parameters should be adapted to your need of course.
+2. Any output usually displaying inside your terminal (e.g. `#!python print()` calls) will render inside the output file.  
+3. Many constraints are available for all kind of hardware request.
+4. The lines bellow prevent weird behavior when activating an environment inside an environment
+5. This is of course the folder containing the `main.py` file.
+6. Here we kept things simple with a single python call but this part could contain multiple instructions.
 
 
 And that's it. Not so hard right ? Now we can store this script inside a file (usually with the `.job` extension), let's call it `example.job`.
