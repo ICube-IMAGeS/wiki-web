@@ -123,21 +123,20 @@ Check out the annotated example script:
     conda activate myenv
     cd path/to/working/directory # (5)
 
+    # +------------------------------------------------------------------------------------+ #
+    # |                                 RUN PYTHON SCRIPT                                  | #
+    # +------------------------------------------------------------------------------------+ #
 
-# +------------------------------------------------------------------------------------+ #
-# |                                 RUN PYTHON SCRIPT                                  | #
-# +------------------------------------------------------------------------------------+ #
+    python main.py # (6)
 
-python main.py # (6)
+    ```
 
-```
-
-1. All the SLURM parameters should be adapted to your need of course.
-2. Any output usually displaying inside your terminal (e.g. `#!python print()` calls) will render inside the output file.  
-3. Many constraints are available for all kind of hardware request.
-4. The lines bellow prevent weird behavior when activating an environment inside an environment
-5. This is of course the folder containing the `main.py` file.
-6. Here we kept things simple with a single python call but this part could contain multiple instructions.
+    1. All the SLURM parameters should be adapted to your need of course.
+    2. Any output usually displaying inside your terminal (e.g. `#!python print()` calls) will render inside the output file.  
+    3. Many constraints are available for all kind of hardware request.
+    4. The lines bellow prevent weird behavior when activating an environment inside an environment
+    5. This is of course the folder containing the `main.py` file.
+    6. Here we kept things simple with a single python call but this part could contain multiple instructions.
 
 
 And that's it. Not so hard right ? Now we can store this script inside a file (usually with the `.job` extension), let's call it `example.job`.
