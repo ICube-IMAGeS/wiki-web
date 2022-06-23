@@ -92,7 +92,7 @@ Let's say we want to execute a file called `main.py` inside a conda environment.
 
 Check out the annotated example script:
 
-<!-- ??? example "Slurm job script" -->
+???+ example "Slurm job script"
 
 ```bash
 #! /bin/bash
