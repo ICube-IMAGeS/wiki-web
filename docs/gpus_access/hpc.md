@@ -94,34 +94,34 @@ Check out the annotated example script:
 
 ???+ example "Slurm job script"
 
-```bash
-#! /bin/bash
+    ```bash
+    #! /bin/bash
 
-# +------------------------------------------------------------------------------------+ #
-# |                                  SLURM PARAMETERS                                  | #
-# +------------------------------------------------------------------------------------+ #
-# (1)
+    # +------------------------------------------------------------------------------------+ #
+    # |                                  SLURM PARAMETERS                                  | #
+    # +------------------------------------------------------------------------------------+ #
+    # (1)
 
-#SBATCH -p publicgpu -A miv                         # Partition publicgpu et compte miv
-#SBATCH -N 1                                        # 1 node
-#SBATCH -n 1                                        # 1 task
-#SBATCH -c 1                                        # 1 CPU
-#SBATCH -o path/to/output.out                       # (2)
-#SBATCH --gres=gpu:1                                # 1 GPU
-#SBATCH --mem=16G                                   # 16 Go RAM
-#SBATCH --constraint="gpua100|gpurtx6000|gpurtx5000|gpuv100" # (3)
+    #SBATCH -p publicgpu -A miv                         # Partition publicgpu et compte miv
+    #SBATCH -N 1                                        # 1 node
+    #SBATCH -n 1                                        # 1 task
+    #SBATCH -c 1                                        # 1 CPU
+    #SBATCH -o path/to/output.out                       # (2)
+    #SBATCH --gres=gpu:1                                # 1 GPU
+    #SBATCH --mem=16G                                   # 16 Go RAM
+    #SBATCH --constraint="gpua100|gpurtx6000|gpurtx5000|gpuv100" # (3)
 
 
-# +------------------------------------------------------------------------------------+ #
-# |                                ENVIRONNEMENT SET UP                                | #
-# +------------------------------------------------------------------------------------+ #
+    # +------------------------------------------------------------------------------------+ #
+    # |                                ENVIRONNEMENT SET UP                                | #
+    # +------------------------------------------------------------------------------------+ #
 
-module load python/Anaconda
-module load cuda/11.3
-source /usr/local/Anaconda/Anaconda3-2019.07/etc/profile.d/conda.sh # (4)
-conda deactivate
-conda activate myenv
-cd path/to/working/directory # (5)
+    module load python/Anaconda
+    module load cuda/11.3
+    source /usr/local/Anaconda/Anaconda3-2019.07/etc/profile.d/conda.sh # (4)
+    conda deactivate
+    conda activate myenv
+    cd path/to/working/directory # (5)
 
 
 # +------------------------------------------------------------------------------------+ #
