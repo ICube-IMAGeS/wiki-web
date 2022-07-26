@@ -55,9 +55,22 @@ Attach to the mail the **public** ed25519 ssh key (usually id_ed25519.pub).
 
 ## II - Understanding how the HPC and SLURM work
 
+### SSH into the HPC
+
+Once you have an account, you can SSH into the login server. The address is `hpc-login.u-strasbg.fr`. If you wanna make things simple, you can create a `config` file on your local computer inside ~/.ssh and add the following: 
+
+```bash
+Host hpc
+	HostName hpc-login.u-strasbg.fr
+	User yourusername
+	ForwardX11 no
+	ForwardX11Trusted no
+```
+
+
 ### SLURM
 
-Once you have an account, you can SSH into the login server. The core principle to have in mind while using the HPC is that **this account is not made to run anything, but only to submit jobs to be ran**. The HPC makes all available ressources shareable accross all users. This is done thanks to a tool called SLURM (Simple Linux Utility for Resource Management). So what you must do on the login server in only to create bash script(s) that will basically:
+The core principle to have in mind while using the HPC is that **this account is not made to run anything, but only to submit jobs to be ran**. The HPC makes all available ressources shareable accross all users. This is done thanks to a tool called SLURM (Simple Linux Utility for Resource Management). So what you must do on the login server in only to create bash script(s) that will basically:
 
 1. request ressources
 
