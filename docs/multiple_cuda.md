@@ -18,8 +18,8 @@ Takeaways: </br>
 will replace the driver. </br>
 2. Installing cuDNN through tar archive and not deb file allows to have multiple installs coexisting.
 3. CUDA compiler nvcc needs compatible version of C and C++ compiler. Multiple versions of those
-compilers can be installed and linked to their nvcc counterparts through symlink. 
-4. Paths can be setted up so that all CUDA versions are available for any task. 
+compilers can be installed and linked to their nvcc counterparts through symlink. </br>
+4. Paths can be setted up so that all CUDA versions are available for any task. </br>
 
 
 
@@ -57,7 +57,7 @@ Then reboot and check install with `nvidia-smi`
 - At the last step, instead of running `sudo apt install cuda`, run `sudo apt install cuda-[version]`, e.g.
 `sudo apt install cuda-11.6`. 
 
-Check your CUDA versions: there are in `/usr/local/`. You should see several folder named `cuda-M.m` and some symlinks,
+Check your CUDA versions: they are in `/usr/local/`. You should see several folder named `cuda-M.m` and some symlinks,
 with one named `cuda` pointing to the default CUDA version. </br>
 **You can change your default CUDA version by updating this symlink:
 `sudo ln -sfT /usr/local/cuda/cuda-M.m/ /usr/local/cuda`**
