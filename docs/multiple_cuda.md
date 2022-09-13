@@ -1,16 +1,25 @@
 # Manage multiple CUDA
 
+---
+<div align='right' class="result" markdown>
+*Luc Vedrenne, june 2022*
+</div>
+
+
+
 !!! info
 
     There are many ways to achieve this. Experts will say the way described here is not "clean".
     Feel free to update this guide to a cleaner version if you want to. I'll be glad !
 
 
-Two takeaways:
-1. The key is to install the latest version compatible with the driver, otherwise each CUDA install
-will replace the driver
-2. CUDA compiler nvcc needs compatible version of C and C++ compiler. Multiple versions of those
+Takeaways: </br>
+1. The key is to install the latest version compatible with the driver first, otherwise each CUDA install
+will replace the driver. </br>
+2. Installing cuDNN through tar archive and not deb file allows to have multiple installs coexisting.
+3. CUDA compiler nvcc needs compatible version of C and C++ compiler. Multiple versions of those
 compilers can be installed and linked to their nvcc counterparts through symlink. 
+4. Paths can be setted up so that all CUDA versions are available for any task. 
 
 
 
@@ -19,13 +28,12 @@ compilers can be installed and linked to their nvcc counterparts through symlink
 Many ways to do it. If your're on Ubuntu, I recommand:
 
 ```
-$ sudo ubuntu-drivers devices
-$ ubuntu-drivers devices
-$ sudo apt install nvidia-driver-[version number]
+sudo ubuntu-drivers devices
+ubuntu-drivers devices
+sudo apt install nvidia-driver-[version number]
 ```
 
-Then reboot and check install with 
-`$ nvidia-smi`
+Then reboot and check install with `nvidia-smi`
 
 
 !!! warning 
@@ -45,27 +53,28 @@ Then reboot and check install with
 
 
 - Go to the [CUDA toolkit archive](https://developer.nvidia.com/cuda-toolkit-archive)
-- Download the version you want and follow the instructions on NVidia website until the second to last step
+- Download the version you want and follow the instructions on Nvidia website until the second to last step
 - At the last step, instead of running `sudo apt install cuda`, run `sudo apt install cuda-[version]`, e.g.
 `sudo apt install cuda-11.6`. 
 
 Check your CUDA versions: there are in `/usr/local/`. You should see several folder named `cuda-M.m` and some symlinks,
 with one named `cuda` pointing to the default CUDA version. </br>
-You can change your default CUDA version by updating this symlink:
-`sudo ln -sfT /usr/local/cuda/cuda-M.m/ /usr/local/cuda`
+**You can change your default CUDA version by updating this symlink:
+`sudo ln -sfT /usr/local/cuda/cuda-M.m/ /usr/local/cuda`**
 
 
 ## III - Install cuDNN
 
 !!! info
 
-    You need an NVidia developper account to download cuDNN. The procedure to create one is straightforward.
+    You need an Nvidia developper account to download tar cuDNN. The procedure to create one is straightforward.
 
 
 - Go to the [cuDNN archive](https://developer.nvidia.com/rdp/cudnn-archive)
 - **Download the tar version and not the deb one**. If you install cuDNN using .deb file, it will replace
 existing installs.
-- Extract the archive: `tar -xzvf cudnn-x.x-linux-x64-v8.x.x.x.tgz` (if it throws an error, retry with `tar -xvf`).
+- Extract the archive: `tar -xzvf cudnn-x.x-linux-x64-v8.x.x.x.[tgz|tar.xz]` (if it throws an error,
+retry with `tar -xvf`, it depends on the archive extension).
 - Copy the cuDNN libraries to **the appropriate CUDA**:
 ```
 cd cudnn-x.x-linux-x64-v8.x.x.x
@@ -87,8 +96,8 @@ When using multiple versions of CUDA, you'll run into compilation errors due to 
 
 Fortunately, you can very easily install multiple version of those C/C++ compilers, for instance:
 ```
-$ sudo apt install build-essential
-$ sudo apt -y install gcc-7 g++-7 gcc-8 g++-8 gcc-9 g++-9
+sudo apt install build-essential
+sudo apt -y install gcc-7 g++-7 gcc-8 g++-8 gcc-9 g++-9
 ```
 
 Of course, adjust the specified version for your need.
