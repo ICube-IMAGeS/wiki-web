@@ -18,3 +18,4 @@ Home of the wiki. Nothing to see here :sleeping: .<br>
 - [ ] Add real wiki content
     * [ ] External GPUs access: HPC & miv
     * [ ] List of useful visualization tools (napari, interactive plot inside a notebook with plotly, ...)
+    * [x] Multiple CUDA management

@@ -18,6 +18,7 @@ nav:
     - External GPUs access:
         - MIV servers: gpus_access/miv.md
         - HPC: gpus_access/hpc.md
+    - Multiple CUDAs management: multiple_cuda.md
 
 # _______________________________________________________________________________________________ #
 
